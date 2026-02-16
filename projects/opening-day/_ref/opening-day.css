@@ -1,0 +1,67 @@
+/* 
+Orange: DF4601
+Black: 090B0B
+White: FFFFFC
+ */
+/* ===== BASE STYLES ===== */
+body {
+    /* TODO: Set font-family, font-size, color (black), 
+    margin for entire page */
+
+}
+
+/* ===== HEADER + footer ===== */
+header,
+footer {
+    /* TODO: Style header with background-color (black), color (white), 
+    text-align, padding -- 
+    footer is comma deliniated because it takes the same styles*/
+
+}
+
+.date-time {
+    /* TODO: Make the date-time orange, uppercase, and bold */
+
+}
+
+/* ===== MAIN CONTENT ===== */
+h2 {
+    /* TODO: Style the h2 (orange) -- 
+    this will carry thru to all h2 elements, including the header*/
+
+}
+
+main {
+    /* TODO: Add margin to main content area */
+
+}
+
+a {
+    /* TODO: Style links throughout the page (color, font-weight) */
+}
+
+.intro {
+    /* TODO: Set font-size for lead-in paragraph to 1.25x the body font size (em) */
+
+}
+
+/* ===== TICKETS SUBSECTION (BUTTON) ===== */
+.tickets {
+    /* TODO: Set line-height to 2, text-align center, and add margin (top and bottom) */
+}
+
+.tickets a {
+    /* TODO: Sets styling for button link - add padding (all sides), 
+    background-color, color, and text-decoration (none) */
+}
+
+/* ===== GAME DETAILS SECTION (ORANGE BOX) ===== */
+.game-details {
+    /* TODO: Style the game-details section with orange background, white text, 
+    centered alignment, padding, and margin */
+}
+
+/* ===== FAQs SECTION ===== */
+.faq {
+    /* TODO: Add an orange left border and padding to the list section */
+}

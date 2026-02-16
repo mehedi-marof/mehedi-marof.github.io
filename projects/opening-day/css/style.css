@@ -1,0 +1,90 @@
+/* 
+Orange: DF4601
+Black: 090B0B
+White: FFFFFC
+ */
+
+/* ===== BASE STYLES ===== */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #090B0B;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== HEADER + footer ===== */
+header,
+footer {
+    background-color: #090B0B;
+    color: #FFFFFC;
+    text-align: center;
+    padding: 2em;
+}
+
+.date-time {
+    color: #DF4601;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    max-width: 1050px;
+    margin: 16px auto 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+h2 {
+    color: #DF4601;
+    font-weight: 700;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 26px 18px 34px;
+}
+
+a {
+    color: #090B0B;
+    font-weight: 700;
+}
+
+.intro {
+    font-size: 1.25em;
+}
+
+/* ===== TICKETS SUBSECTION (BUTTON) ===== */
+.tickets {
+    line-height: 2;
+    text-align: center;
+    margin: 18px 0 26px;
+}
+
+.tickets a {
+    padding: 12px 22px;
+    background-color: #090B0B;
+    color: #FFFFFC;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+}
+
+/* ===== GAME DETAILS SECTION (ORANGE BOX) ===== */
+.game-details {
+    background-color: #DF4601;
+    color: #FFFFFC;
+    text-align: center;
+    padding: 22px 12px;
+    margin: 28px 0;
+}
+
+/* ===== FAQs SECTION ===== */
+.faq {
+    border-left: 6px solid #DF4601;
+    padding-left: 2em;
+}
