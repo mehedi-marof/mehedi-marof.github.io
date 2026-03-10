@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehedi Marof | Published Work</title>
+    <meta name="description"
+        content="Published work by Mehedi Marof across international, national, and local news outlets.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="container">
+            <nav class="navbar navbar-expand-md p-0" aria-label="Main navigation">
+                <a class="navbar-brand site-logo m-0" href="index.html">Mehedi Marof</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-md-end" id="mainNav">
+                    <ul class="navbar-nav ms-auto gap-md-4">
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link active-nav" href="clips.html">Reportages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="subpage-main">
+        <section class="page-hero page-hero-compact">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <h1 class="page-title">Published Work</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="clips-section clips-section-simple">
+            <div class="container">
+                <div id="clipsGrid" class="published-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div
+                class="footer-inner d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+                <p class="mb-0">&copy; 2026 Mehedi Marof</p>
+                <a href="#top" class="back-to-top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const clips = [
+            {
+                title: "Nahid Islam and the uneasy alliance that could shape Bangladesh’s vote",
+                outlet: "Al Jazeera",
+                date: "2026-02-11",
+                categories: ["Politics", "Elections"],
+                url: "https://www.aljazeera.com/features/2026/2/11/nahid-islam-and-the-uneasy-alliance-that-could-shape-bangladeshs-vote"
+            },
+            {
+                title: "Jobs, cash, loans: Can Bangladesh’s parties deliver on election promises?",
+                outlet: "Al Jazeera",
+                date: "2026-02-03",
+                categories: ["Politics", "Economy", "Elections"],
+                url: "https://www.aljazeera.com/features/2026/2/3/jobs-cash-loans-can-bangladeshs-parties-deliver-on-election-promises"
+            },
+            {
+                title: "Bangladesh election: Is the military still a power behind the scenes?",
+                outlet: "Al Jazeera",
+                date: "2026-01-29",
+                categories: ["Politics", "Military", "Elections"],
+                url: "https://www.aljazeera.com/features/2026/1/29/bangladesh-election-is-the-military-still-a-power-behind-the-scenes"
+            },
+            {
+                title: "Bangladeshi Gen Z toppled Hasina. Now they could decide next prime minister",
+                outlet: "Al Jazeera",
+                date: "2026-01-20",
+                categories: ["Politics", "Youth", "Elections"],
+                url: "https://www.aljazeera.com/features/2026/1/20/bangladeshi-youth-toppled-hasina-now-they-could-decide-next-prime-minister"
+            },
+            {
+                title: "Priced out at College Park: Graduate students struggle with high rents",
+                outlet: "Maryland Matters",
+                date: "2025-12-31",
+                categories: ["Local", "Housing", "Education"],
+                url: "https://marylandmatters.org/2025/12/31/priced-out-at-college-park-graduate-students-struggle-with-high-rents/"
+            },
+            {
+                title: "How Starlink benefited from Elon Musk’s Trump ties",
+                outlet: "Rest of World",
+                date: "2025-12-03",
+                categories: ["Technology", "Politics"],
+                url: "https://restofworld.org/2025/musk-starlink-trump-doge/"
+            },
+            {
+                title: "Developer plans student housing for Guilford Drive",
+                outlet: "College Park Here & Now",
+                date: "2025-12-08",
+                categories: ["Local", "Housing", "Development"],
+                url: "https://streetcarsuburbs.news/developer-plans-student-housing-for-guilford-drive/"
+            },
+            {
+                title: "College Park Day features music, food, vendors",
+                outlet: "College Park Here & Now",
+                date: "2025-10-19",
+                categories: ["Local", "Community"],
+                url: "https://streetcarsuburbs.news/college-park-day-features-music-food-vendors/"
+            },
+            {
+                title: "3 run for 2 District 2 council seats",
+                outlet: "College Park Here & Now",
+                date: "2025-10-08",
+                categories: ["Local Politics", "Elections"],
+                url: "https://streetcarsuburbs.news/3-run-for-2-district-2-council-seats/"
+            },
+            {
+                title: "In Cumilla, a murder exposes army’s contempt for rules",
+                outlet: "Netra News",
+                date: "2025-03-10",
+                categories: ["Accountability", "Military", "Crime"],
+                url: "https://netra.news/authors/mehedi/"
+            },
+            {
+                title: "‘Gotham but no Batman’: Crime grips Bangladesh 6 months after Hasina fled",
+                outlet: "Al Jazeera",
+                date: "2025-03-04",
+                categories: ["Politics", "Crime"],
+                url: "https://www.aljazeera.com/features/2025/3/4/gotham-but-no-batman-crime-wave-grips-dhaka-6-months-after-hasina-fled"
+            },
+            {
+                title: "Why do anti-India sentiments simmer across Bangladesh?",
+                outlet: "Netra News",
+                date: "2025-01-19",
+                categories: ["Politics", "Analysis"],
+                url: "https://netra.news/authors/mehedi/"
+            },
+            {
+                title: "What’s still standing in the way of Tarique’s homecoming?",
+                outlet: "Netra News",
+                date: "2024-12-20",
+                categories: ["Politics"],
+                url: "https://netra.news/authors/mehedi/"
+            },
+            {
+                title: "‘Our lives don’t matter’: Bangladeshi Hindus under attack after Hasina exit",
+                outlet: "Al Jazeera",
+                date: "2024-12-12",
+                categories: ["Human Rights", "Politics", "Minority Issues"],
+                url: "https://www.aljazeera.com/features/2024/12/12/our-lives-dont-matter-in-post-hasina-bangladesh-hindus-fear-future"
+            },
+            {
+                title: "Hindu nationalist mob storms Bangladesh mission in India amid escalating tension",
+                outlet: "Netra News",
+                date: "2024-12-02",
+                categories: ["Politics", "Protests", "Minority Issues"],
+                url: "https://netra.news/authors/mehedi/"
+            },
+            {
+                title: "Bangladesh’s new outcasts: Students from ex-PM Hasina’s party now in hiding",
+                outlet: "Al Jazeera",
+                date: "2024-10-27",
+                categories: ["Politics", "Youth"],
+                url: "https://www.aljazeera.com/news/2024/10/27/once-powerful-student-members-of-hasinas-party-bangladeshs-new-outcastes"
+            },
+            {
+                title: "In Bangladesh, an old flashpoint re-erupts: Tribals clash with ‘settlers’ and army",
+                outlet: "Scroll",
+                date: "2024-09-21",
+                categories: ["Politics", "Conflict", "Minority Issues"],
+                url: "https://scroll.in/author/25936"
+            },
+            {
+                title: "Can the Bangladesh Police Recover?",
+                outlet: "The Diplomat",
+                date: "2024-08-20",
+                categories: ["Accountability", "Politics", "Security"],
+                url: "https://thediplomat.com/2024/08/can-the-bangladesh-police-recover/"
+            },
+            {
+                title: "Bangladesh protesters call for Nobel laureate Muhammad Yunus to lead after PM’s ouster",
+                outlet: "NBC News",
+                date: "2024-08-05",
+                categories: ["Politics", "Breaking News", "Protests", "International"],
+                url: "https://www.nbcnews.com/news/world/bangladesh-protesters-call-nobel-laureate-muhammad-yunus-lead-rcna165310"
+            },
+            {
+                title: "Bangladesh prime minister is reportedly ousted by student-led protests",
+                outlet: "NBC News",
+                date: "2024-08-05",
+                categories: ["Politics", "Breaking News", "Protests"],
+                url: "https://www.nbcnews.com/news/world/bangladesh-prime-minister-sheikh-hasina-resigns-anti-government-prote-rcna165302"
+            },
+            {
+                title: "How Bangladesh’s Quota Reform Protest Turned Into a Mass Uprising Against a ‘Killer Government’",
+                outlet: "The Diplomat",
+                date: "2024-08-05",
+                categories: ["Politics", "Protests"],
+                url: "https://thediplomat.com/2024/08/how-bangladeshs-quota-reform-protest-turned-into-a-mass-uprising-against-a-killer-government/"
+            },
+            {
+                title: "‘Step Down Hasina’: As millions take to the streets in Bangladesh, at least 91 feared dead",
+                outlet: "Scroll",
+                date: "2024-08-04",
+                categories: ["Politics", "Protests"],
+                url: "https://scroll.in/author/25936"
+            },
+            {
+                title: "Bangladesh student-led protests morph into a mass uprising to unseat an ‘autocratic government’",
+                outlet: "Scroll",
+                date: "2024-08-03",
+                categories: ["Politics", "Protests", "Youth"],
+                url: "https://scroll.in/author/25936"
+            },
+            {
+                title: "Raids, Mass Arrests and a Climate of Terror: Student Identity Sparks Concerns of Detention in Bangladesh",
+                outlet: "The Wire",
+                date: "2024-07-31",
+                categories: ["Human Rights", "Politics", "Protests"],
+                url: "https://m.thewire.in/article/south/raids-mass-arrests-and-a-climate-of-terror-student-identity-sparks-concerns-of-detention-in-bangladesh"
+            },
+            {
+                title: "In Bangladesh, climate disasters are forcing girls into underage marriages",
+                outlet: "Scroll",
+                date: "2024-05-24",
+                categories: ["Climate", "Human Rights"],
+                url: "https://scroll.in/author/25936"
+            },
+            {
+                title: "‘One less mouth to feed’: Climate disasters fuelling child marriage in Bangladesh",
+                outlet: "Dialogue Earth",
+                date: "2024-05-17",
+                categories: ["Climate", "Human Rights"],
+                url: "https://dialogue.earth/en/climate/climate-disasters-linked-to-child-marriage-bangladesh/"
+            },
+            {
+                title: "What does it take to parent a child with disabilities?",
+                outlet: "The Business Standard",
+                date: "2024-03-17",
+                categories: ["Features", "Society"],
+                url: "https://www.tbsnews.net/features/panorama/what-does-it-take-parent-child-disabilities-810114"
+            },
+            {
+                title: "Ramadan away from home: How it goes for Bangladeshi students abroad",
+                outlet: "The Business Standard",
+                date: "2024-03-14",
+                categories: ["Features", "Education"],
+                url: "https://www.tbsnews.net/features/far-home-foreign-ramadan-bangladeshi-students-abroad-808614"
+            },
+            {
+                title: "Mojo’s Gaza aid also rockets its sales",
+                outlet: "The Business Standard",
+                date: "2024-03-12",
+                categories: ["Economy", "Business"],
+                url: "https://www.tbsnews.net/economy/mojos-gaza-aid-also-rockets-its-sales-807686"
+            },
+            {
+                title: "Leap Day: The bonus workday you never asked for",
+                outlet: "The Business Standard",
+                date: "2024-02-29",
+                categories: ["Features"],
+                url: "https://www.tbsnews.net/splash/leap-day-bonus-workday-you-never-asked-801006"
+            },
+            {
+                title: "Bollywood college-love that was hardly met in reality",
+                outlet: "The Business Standard",
+                date: "2024-02-14",
+                categories: ["Features", "Culture"],
+                url: "https://www.tbsnews.net/features/bollywood-college-love-hardly-met-reality-792942"
+            },
+            {
+                title: "From 48 hours to ‘50 years’: The never-ending Sagar-Runi murder mystery",
+                outlet: "The Business Standard",
+                date: "2024-02-11",
+                categories: ["Crime", "Accountability"],
+                url: "https://www.tbsnews.net/bangladesh/crime/48-hours-50-years-never-ending-sagar-runi-murder-mystery-790978"
+            },
+            {
+                title: "Which Royal Enfield model is right for you? Here’s what you need to know",
+                outlet: "The Business Standard",
+                date: "2024-01-24",
+                categories: ["Features", "Consumer"],
+                url: "https://www.tbsnews.net/features/wheels/which-royal-enfield-model-right-you-heres-what-you-need-know-780550"
+            },
+            {
+                title: "Newly-formed cabinet by age: Oldest minister 81, youngest 41",
+                outlet: "The Business Standard",
+                date: "2024-01-11",
+                categories: ["Politics", "Data"],
+                url: "https://www.tbsnews.net/bangladesh/newly-formed-cabinet-age-oldest-minister-81-youngest-51-773302"
+            },
+            {
+                title: "New cabinet: 15 from Dhaka, 9 from Ctg, 13 from other divisions",
+                outlet: "The Business Standard",
+                date: "2024-01-11",
+                categories: ["Politics", "Data"],
+                url: "https://www.tbsnews.net/bangladesh/politics/new-cabinet-15-dhaka-9-ctg-13-other-divisions-773282"
+            },
+            {
+                title: "Woes of university admission seekers amid political strife",
+                outlet: "The Business Standard",
+                date: "2023-11-28",
+                categories: ["Education", "Politics"],
+                url: "https://www.tbsnews.net/bangladesh/education/political-unrest-hampers-admission-prep-hsc-2023-intake-747782"
+            },
+            {
+                title: "Dhaka traffic near normal as BNP-Jamaat hartal underway",
+                outlet: "The Business Standard",
+                date: "2023-11-19",
+                categories: ["Transport", "Politics"],
+                url: "https://www.tbsnews.net/bangladesh/transport/dhaka-traffic-near-normal-bnp-jamaat-hartal-underway-742222"
+            },
+            {
+                title: "Endless cycle of poverty and struggle along the shore",
+                outlet: "The Business Standard",
+                date: "2023-11-07",
+                categories: ["Features", "Poverty", "Climate"],
+                url: "https://www.tbsnews.net/features/panorama/endless-cycle-poverty-and-struggle-along-shore-734594"
+            },
+            {
+                title: "‘My stomach doesn’t understand blockade’: Transport workers who defy fear, death",
+                outlet: "The Business Standard",
+                date: "2023-11-06",
+                categories: ["Features", "Transport", "Politics"],
+                url: "https://www.tbsnews.net/features/dont-want-be-burned-transport-workers-defy-fear-take-roads-stave-hunger-734202"
+            },
+            {
+                title: "Political instability snatching what little left for daily wage earners",
+                outlet: "The Business Standard",
+                date: "2023-11-01",
+                categories: ["Features", "Politics", "Economy"],
+                url: "https://www.tbsnews.net/features/political-instability-snatching-what-little-left-daily-wage-earners-731226"
+            },
+            {
+                title: "Panic at the pump: How Israel-Hamas conflict prompts revisit to global oil crisis",
+                outlet: "The Business Standard",
+                date: "2023-10-09",
+                categories: ["World", "Economy", "Energy"],
+                url: "https://www.tbsnews.net/world/global-economy/panic-pump-how-israel-hamas-conflict-prompts-revisit-oil-crisis-715198"
+            },
+            {
+                title: "An unexpected rain, an unexpected expense: How food delivery men survive Dhaka’s storms",
+                outlet: "The Business Standard",
+                date: "2023-09-29",
+                categories: ["Features", "Labor", "Climate"],
+                url: "https://www.tbsnews.net/features/unexpected-rain-unexpected-expense-how-food-delivery-men-survive-dhakas-storms-709034"
+            },
+            {
+                title: "Rise in work-from-home job scams in Bangladesh: What you need to know",
+                outlet: "The Business Standard",
+                date: "2023-09-22",
+                categories: ["Crime", "Economy"],
+                url: "https://www.tbsnews.net/bangladesh/crime/rise-work-home-job-scams-bangladesh-what-you-need-know-705162"
+            },
+            {
+                title: "Reality under the rug of progress",
+                outlet: "The Business Standard",
+                date: "2023-09-21",
+                categories: ["Opinion", "Society"],
+                url: "https://www.tbsnews.net/author/mehedi-hasan-marof?page=1"
+            },
+            {
+                title: "ICC CWC 2023: A sporting spectacle with glimpse of economic prosperity",
+                outlet: "The Business Standard",
+                date: "2023-09-20",
+                categories: ["Sports", "Economy"],
+                url: "https://www.tbsnews.net/sports/icc-cwc-2023-sporting-spectacle-glimpse-economic-prosperity-711478"
+            },
+            {
+                title: "Explainer: Who is Lavrov, the man leading Russia at G20 Summit as Putin’s proxy",
+                outlet: "The Business Standard",
+                date: "2023-09-08",
+                categories: ["World", "Politics", "Explainer"],
+                url: "https://www.tbsnews.net/world/russian-fm-lavrov-takes-centre-stage-g20-summit-amid-putins-absence-697010"
+            }
+        ];
+
+        const outletLogos = {
+            "Al Jazeera": "images/logos/aljazeera.svg",
+            "College Park Here & Now": "images/logos/college-park-hn.webp",
+            "Dialogue Earth": "images/logos/dialogueearth.svg",
+            "Maryland Matters": "images/logos/marylandmatters.png",
+            "NBC News": "images/logos/nbcnews.svg",
+            "Netra News": "images/logos/netranews.png",
+            "The Diplomat": "images/logos/thediplomat.png",
+            "Rest of World": "images/logos/restofworld.svg",
+            "Scroll": "images/logos/scrollindia.svg",
+            "The Business Standard": "images/logos/tbsnews.svg",
+            "The Wire": "images/logos/thewire.svg"
+        };
+
+        const clipsGrid = document.getElementById("clipsGrid");
+
+        function formatDate(dateString) {
+            const date = new Date(dateString + "T00:00:00");
+            return date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+        }
+
+        function renderClips() {
+            const sorted = [...clips].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            clipsGrid.innerHTML = sorted.map((clip) => {
+                const tags = clip.categories
+                    .map((category) => `<span class="clip-tag">${category}</span>`)
+                    .join("");
+
+                const logoSrc = outletLogos[clip.outlet];
+                const logoMarkup = logoSrc
+                    ? `<img src="${logoSrc}" alt="${clip.outlet} logo" class="published-logo">`
+                    : `<span class="published-outlet-name">${clip.outlet}</span>`;
+
+                return `
+                    <article class="published-card">
+                        <a class="published-card-link" href="${clip.url}" target="_blank" rel="noopener noreferrer" aria-label="${clip.title}">
+                            <div class="published-meta-top">
+                                <div class="published-logo-wrap">
+                                    ${logoMarkup}
+                                </div>
+                                <p class="published-date">${formatDate(clip.date)}</p>
+                            </div>
+
+                            <h2 class="published-headline">${clip.title}</h2>
+
+                            <div class="published-tags">
+                                ${tags}
+                            </div>
+                        </a>
+                    </article>
+                `;
+            }).join("");
+        }
+
+        renderClips();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
