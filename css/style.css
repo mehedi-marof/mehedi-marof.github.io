@@ -35,8 +35,8 @@ body {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 a {
@@ -49,10 +49,7 @@ a:hover {
     color: var(--hover);
 }
 
-p {
-    margin-bottom: 0;
-}
-
+p,
 ul {
     margin-bottom: 0;
 }
@@ -69,9 +66,7 @@ ul {
 .nav-link,
 .section-heading,
 .panel-heading,
-.page-title,
-.resume-section-title,
-.resume-card-title {
+.page-title {
     font-weight: 600;
 }
 
@@ -86,10 +81,10 @@ ul {
 }
 
 .nav-link {
-    font-size: 0.82rem;
-    color: var(--text-strong);
     padding-left: 0.65rem !important;
     padding-right: 0.65rem !important;
+    font-size: 0.82rem;
+    color: var(--text-strong);
     text-transform: none;
 }
 
@@ -99,8 +94,8 @@ ul {
 }
 
 .navbar-toggler {
-    border: 1px solid var(--line);
     padding: 0.3rem 0.55rem;
+    border: 1px solid var(--line);
 }
 
 .navbar-toggler:focus {
@@ -123,19 +118,19 @@ ul {
 .headshot-round {
     width: 104px;
     height: 104px;
-    object-fit: cover;
-    border-radius: 50%;
     margin: 0 auto 1rem;
     border: 3px solid #d9d1eb;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
 .hero-title {
-    font-weight: 800;
+    margin-bottom: 0.75rem;
     font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
     line-height: 1;
     letter-spacing: 0.01em;
-    margin-bottom: 0.75rem;
     color: var(--text-strong);
 }
 
@@ -157,10 +152,10 @@ ul {
 
 .hero-links {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     margin-top: 0.3rem;
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -223,20 +218,20 @@ ul {
 
 .scrolling-hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
-    flex-wrap: wrap;
     gap: 0.35rem;
-    margin-bottom: 0.75rem;
     min-height: 2.7rem;
+    margin-bottom: 0.75rem;
     line-height: 1.05;
 }
 
 .rotating-word,
 .ampersand,
 .hero-topic {
-    font-weight: 800;
     font-size: clamp(1.35rem, 2.3vw, 2.1rem);
+    font-weight: 800;
     letter-spacing: -0.03em;
 }
 
@@ -259,8 +254,8 @@ ul {
 
 .pills {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.4rem;
 }
 
@@ -270,14 +265,14 @@ ul {
     justify-content: center;
     padding: 0.42rem 0.7rem;
     border: 1px solid #d8d0c9;
-    color: var(--muted-2);
     background: transparent;
+    color: var(--muted-2);
     font-size: 0.62rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-/* ---------- selected work on homepage ---------- */
+/* ---------- selected work ---------- */
 
 .selected-work-section {
     padding: 0.45rem 0 2.8rem;
@@ -289,9 +284,9 @@ ul {
 }
 
 .section-heading {
+    margin-bottom: 0;
     font-size: 1.4rem;
     line-height: 1.1;
-    margin-bottom: 0;
     color: var(--text-strong);
 }
 
@@ -302,22 +297,22 @@ ul {
     display: block;
     width: 54px;
     height: 2px;
-    background: var(--accent);
     margin: 0.45rem auto 0;
+    background: var(--accent);
 }
 
 .story-card {
-    background: var(--surface);
+    overflow: hidden;
     border: 1px solid #e2d9f0;
     border-radius: 18px;
-    overflow: hidden;
+    background: var(--surface);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .story-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07);
     border-color: #d7cceb;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07);
 }
 
 .story-image {
@@ -330,21 +325,21 @@ ul {
 }
 
 .story-outlet-logo {
-    height: 20px;
     display: flex;
     align-items: center;
+    height: 20px;
 }
 
 .story-outlet-logo img {
-    max-height: 18px;
     width: auto;
     max-width: 125px;
+    max-height: 18px;
 }
 
 .story-headline {
     font-size: 0.84rem;
-    line-height: 1.48;
     font-weight: 600;
+    line-height: 1.48;
     color: var(--text);
     transition: color 0.2s ease;
 }
@@ -353,7 +348,7 @@ ul {
     color: var(--hover);
 }
 
-/* ---------- publication block on homepage ---------- */
+/* ---------- publication block ---------- */
 
 .publication-section {
     padding-bottom: 3rem;
@@ -377,29 +372,29 @@ ul {
 }
 
 .panel-heading {
+    margin-bottom: 0.9rem;
     font-size: 1.2rem;
     line-height: 1.15;
-    margin-bottom: 0.9rem;
-    color: var(--text-strong);
     text-align: center;
+    color: var(--text-strong);
 }
 
 .logo-box {
-    min-height: 76px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 76px;
     padding: 0.7rem;
-    background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 14px;
+    background: var(--surface);
 }
 
 .logo-box img {
-    max-width: 88%;
-    max-height: 26px;
     width: auto;
     height: auto;
+    max-width: 88%;
+    max-height: 26px;
     object-fit: contain;
 }
 
@@ -407,19 +402,11 @@ ul {
     max-height: 24px;
 }
 
-img[alt="Maryland Matters logo"] {
-    max-height: 30px;
-}
-
-img[alt="College Park Here and Now logo"] {
-    max-height: 22px;
-}
-
 /* ---------- footer ---------- */
 
 .site-footer {
-    border-top: 1px solid var(--line);
     padding: 1.15rem 0 1.45rem;
+    border-top: 1px solid var(--line);
 }
 
 .footer-inner {
@@ -431,10 +418,10 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .back-to-top {
+    font-size: 0.78rem;
     color: var(--muted-2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.78rem;
 }
 
 .back-to-top:hover {
@@ -464,16 +451,16 @@ img[alt="College Park Here and Now logo"] {
 .eyebrow {
     margin-bottom: 0.45rem;
     font-size: 0.72rem;
+    color: var(--muted-2);
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--muted-2);
 }
 
 .page-title {
-    font-weight: 800;
-    font-size: clamp(2rem, 4vw, 2.85rem);
-    line-height: 1.05;
     margin-bottom: 0;
+    font-size: clamp(2rem, 4vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.05;
     color: var(--text-strong);
 }
 
@@ -496,29 +483,29 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .resume-simple-wrap {
-    max-width: 980px;
-    margin: 0 auto;
     display: grid;
     gap: 1.8rem;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .resume-inline-links {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.35rem;
     align-items: center;
+    gap: 0.35rem;
+    margin-top: 1rem;
     font-size: 0.92rem;
     line-height: 1.7;
 }
 
 .resume-inline-links a,
 .cv-toggle {
-    color: var(--text);
-    background: none;
-    border: none;
     padding: 0;
+    border: none;
+    background: none;
+    color: var(--text);
     font: inherit;
     cursor: pointer;
     text-decoration-line: underline;
@@ -534,9 +521,23 @@ img[alt="College Park Here and Now logo"] {
     text-decoration-color: var(--hover);
 }
 
+.cv-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.cv-inline summary {
+    list-style: none;
+}
+
+.cv-inline summary::-webkit-details-marker {
+    display: none;
+}
+
 .cv-note {
-    color: var(--muted);
     margin-left: 0.3rem;
+    color: var(--muted);
 }
 
 .resume-block {
@@ -549,20 +550,16 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .resume-section-label {
+    margin-bottom: 0;
     font-size: 0.96rem;
     font-weight: 700;
+    color: var(--muted-2);
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--muted-2);
-    margin-bottom: 0;
 }
 
 .resume-entry-simple {
     padding: 1.05rem 0;
-    border-top: 1px solid #ddd5ee;
-}
-
-.resume-entry-simple:first-of-type {
     border-top: 1px solid #ddd5ee;
 }
 
@@ -574,11 +571,11 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .resume-role {
-    font-size: 1.05rem;
-    line-height: 1.35;
-    font-weight: 700;
-    color: var(--text);
     margin: 0 0 0.2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text);
 }
 
 .resume-outlet {
@@ -602,9 +599,9 @@ img[alt="College Park Here and Now logo"] {
     margin: 0;
     white-space: nowrap;
     font-size: 0.75rem;
+    color: var(--muted-2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--muted-2);
 }
 
 .resume-more {
@@ -612,12 +609,12 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .resume-more summary {
+    width: fit-content;
     list-style: none;
     cursor: pointer;
     color: var(--accent);
     font-size: 0.84rem;
     font-weight: 600;
-    width: fit-content;
 }
 
 .resume-more summary::-webkit-details-marker {
@@ -634,10 +631,10 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .resume-bullet-list {
-    padding-left: 1.1rem;
     display: grid;
     gap: 0.45rem;
     margin-top: 0.65rem;
+    padding-left: 1.1rem;
 }
 
 .resume-bullet-list li {
@@ -660,26 +657,6 @@ img[alt="College Park Here and Now logo"] {
     text-decoration-color: var(--hover);
 }
 
-@media (max-width: 767.98px) {
-    .resume-entry-main {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
-    .resume-entry-date {
-        white-space: normal;
-    }
-
-    .resume-role,
-    .resume-outlet {
-        font-size: 0.98rem;
-    }
-
-    .resume-bullet-list li {
-        font-size: 0.89rem;
-    }
-}
-
 /* ---------- published work ---------- */
 
 .clips-section-simple {
@@ -687,26 +664,26 @@ img[alt="College Park Here and Now logo"] {
 }
 
 .published-grid {
-    max-width: 1160px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.1rem;
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
 .published-card {
-    background: var(--surface);
+    overflow: hidden;
     border: 1px solid #e7def3;
     border-radius: 22px;
+    background: var(--surface);
     box-shadow: var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    overflow: hidden;
 }
 
 .published-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(28, 22, 40, 0.08);
     border-color: #d8ccec;
+    box-shadow: 0 14px 30px rgba(28, 22, 40, 0.08);
 }
 
 .published-card-link {
@@ -722,22 +699,22 @@ img[alt="College Park Here and Now logo"] {
 .published-meta-top {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .published-logo-wrap {
-    min-height: 30px;
     display: flex;
     align-items: center;
+    min-height: 30px;
     max-width: 190px;
 }
 
 .published-logo {
-    max-height: 28px;
     width: auto;
     max-width: 180px;
+    max-height: 28px;
     object-fit: contain;
 }
 
@@ -749,18 +726,18 @@ img[alt="College Park Here and Now logo"] {
 
 .published-date {
     font-size: 0.74rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: var(--muted-2);
     text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     white-space: nowrap;
 }
 
 .published-headline {
     margin: 0 0 1rem;
     font-size: 1.06rem;
-    line-height: 1.58;
     font-weight: 700;
+    line-height: 1.58;
     color: var(--text);
     transition: color 0.2s ease;
 }
@@ -778,37 +755,14 @@ img[alt="College Park Here and Now logo"] {
 .clip-tag {
     display: inline-flex;
     align-items: center;
-    border: 1px solid #e6def2;
-    background: var(--surface-soft);
-    border-radius: 999px;
     padding: 0.36rem 0.72rem;
+    border: 1px solid #e6def2;
+    border-radius: 999px;
+    background: var(--surface-soft);
+    color: #5f566d;
     font-size: 0.72rem;
     line-height: 1;
-    color: #5f566d;
     letter-spacing: 0.02em;
-}
-
-/* ---------- legacy clips classes kept safe ---------- */
-
-.clips-controls,
-.clips-search-wrap,
-.clips-filters,
-.filter-group,
-.results-meta,
-.clips-grid,
-.clip-card,
-.no-results-card,
-.clip-card-head,
-.clip-outlet,
-.outlet-logo-img,
-.outlet-fallback,
-.clip-date,
-.clip-title,
-.clip-tags,
-.clip-read-more,
-.clips-search,
-.clips-select {
-    max-width: 100%;
 }
 
 /* ---------- contact ---------- */
@@ -830,18 +784,18 @@ img[alt="College Park Here and Now logo"] {
 .contact-row {
     display: grid;
     grid-template-columns: 170px minmax(0, 1fr);
+    align-items: start;
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid #ddd5ee;
-    align-items: start;
 }
 
 .contact-label {
     margin: 0;
     font-size: 0.78rem;
+    color: var(--muted-2);
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--muted-2);
 }
 
 .contact-value,
@@ -881,20 +835,6 @@ img[alt="College Park Here and Now logo"] {
     color: var(--muted);
 }
 
-@media (max-width: 767.98px) {
-    .contact-row {
-        grid-template-columns: 1fr;
-        gap: 0.3rem;
-        padding: 0.95rem 0;
-    }
-
-    .contact-value,
-    .contact-text,
-    .contact-footnote {
-        font-size: 0.92rem;
-    }
-}
-
 /* ---------- responsive ---------- */
 
 @media (max-width: 1199.98px) {
@@ -911,10 +851,6 @@ img[alt="College Park Here and Now logo"] {
 
     .publication-divider {
         display: none;
-    }
-
-    .resume-shell {
-        grid-template-columns: 1fr;
     }
 
     .published-grid {
@@ -993,25 +929,7 @@ img[alt="College Park Here and Now logo"] {
         font-size: 1.95rem;
     }
 
-    .resume-card,
-    .resume-main-card {
-        padding: 1.05rem;
-        border-radius: 18px;
-    }
-
-    .resume-name {
-        font-size: 1.45rem;
-    }
-
-    .resume-summary,
-    .resume-contact-list a,
-    .resume-entry-org,
-    .resume-bullet-list li,
-    .resume-plain-list li {
-        font-size: 0.88rem;
-    }
-
-    .resume-entry-top {
+    .resume-entry-main {
         flex-direction: column;
         gap: 0.25rem;
     }
@@ -1020,12 +938,21 @@ img[alt="College Park Here and Now logo"] {
         white-space: normal;
     }
 
-    .published-card-link {
-        padding: 1rem;
+    .resume-role,
+    .resume-outlet {
+        font-size: 0.98rem;
+    }
+
+    .resume-bullet-list li {
+        font-size: 0.89rem;
     }
 
     .published-card {
         border-radius: 18px;
+    }
+
+    .published-card-link {
+        padding: 1rem;
     }
 
     .published-meta-top {
@@ -1039,8 +966,8 @@ img[alt="College Park Here and Now logo"] {
     }
 
     .published-logo {
-        max-height: 24px;
         max-width: 150px;
+        max-height: 24px;
     }
 
     .published-date {
@@ -1050,6 +977,18 @@ img[alt="College Park Here and Now logo"] {
 
     .published-headline {
         font-size: 0.98rem;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 0.95rem 0;
+    }
+
+    .contact-value,
+    .contact-text,
+    .contact-footnote {
+        font-size: 0.92rem;
     }
 
     .footer-inner {
