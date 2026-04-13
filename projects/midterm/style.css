@@ -1,0 +1,123 @@
+body {
+  background: #000;
+  color: #f7f7f7;
+  font-family: "Google Sans Flex", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+a {
+  color: #f7f7f7;
+}
+
+.container,
+.container-fluid {
+  max-width: none;
+}
+
+.container {
+  width: 45%;
+}
+
+.container-fluid {
+  width: 85%;
+}
+
+section {
+  margin: 3em auto;
+}
+
+.site-header {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Prompt", sans-serif;
+  font-size: 5em;
+  font-weight: 300;
+  color: #d3d3d3;
+  margin: 2em 0 4em;
+  text-align: center;
+}
+
+h1 span {
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f7f7f7;
+}
+
+main em.caption,
+.byline,
+footer {
+  color: #919191;
+  font-size: 0.75em;
+  display: block;
+}
+
+.byline,
+footer {
+  font-style: normal;
+}
+
+main em.caption {
+  margin-top: 0.4rem;
+  font-style: normal;
+}
+
+.round-image {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.data-section .col-lg-5 p {
+  margin-bottom: 1rem;
+}
+
+.photo-grid-section {
+  background: #f7f7f7;
+  color: #000;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.photo-grid-section p {
+  font-size: 0.85em;
+}
+
+.photo-grid-section em.caption {
+  color: #000;
+  text-align: right;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-style: normal;
+}
+
+.page-footer {
+  text-align: center;
+  margin: 3em auto;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .container,
+  .container-fluid {
+    width: 95%;
+  }
+
+  section {
+    margin: auto;
+  }
+
+  .photo-grid-section {
+    margin: 2em auto;
+  }
+}
