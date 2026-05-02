@@ -668,11 +668,26 @@
           <!-- Share row -->
           <div class="share-row">
             <span class="share-label">Share this story</span>
-            <a href="#" class="share-btn" aria-label="Share on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="share-btn" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="share-btn" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="share-btn" aria-label="Email this story"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#" class="share-btn" aria-label="Copy link"><i class="fa-solid fa-link"></i></a>
+
+            <a href="#" class="share-btn" data-share="twitter" aria-label="Share on X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" class="share-btn" data-share="facebook" aria-label="Share on Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="share-btn" data-share="linkedin" aria-label="Share on LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="share-btn" data-share="email" aria-label="Email this story">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="#" class="share-btn" data-share="copy" aria-label="Copy link">
+              <i class="fa-solid fa-link"></i>
+            </a>
           </div>
 
           <div class="end-mark">&middot;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&middot;</div>
@@ -714,6 +729,56 @@
         const item = btn.closest('.t-item');
         const isOpen = item.classList.toggle('is-open');
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    // Share buttons
+    const storyTitle = document.title;
+    const storyUrl = window.location.href;
+
+    document.querySelectorAll(".share-btn[data-share]").forEach(btn => {
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const type = btn.dataset.share;
+        const encodedTitle = encodeURIComponent(storyTitle);
+        const encodedUrl = encodeURIComponent(storyUrl);
+
+        let shareUrl = "";
+
+        if (type === "twitter") {
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+        }
+
+        if (type === "facebook") {
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+        }
+
+        if (type === "linkedin") {
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        }
+
+        if (type === "email") {
+          shareUrl = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
+        }
+
+        if (type === "copy") {
+          try {
+            await navigator.clipboard.writeText(storyUrl);
+            btn.setAttribute("aria-label", "Link copied");
+            btn.classList.add("copied");
+
+            setTimeout(() => {
+              btn.setAttribute("aria-label", "Copy link");
+              btn.classList.remove("copied");
+            }, 1500);
+          } catch {
+            alert("Could not copy link.");
+          }
+          return;
+        }
+
+        window.open(shareUrl, "_blank", "noopener,noreferrer,width=700,height=500");
       });
     });
   </script>
