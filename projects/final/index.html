@@ -920,6 +920,7 @@
             pull back," Harbourt said. "And that's just a reality now."
           </p>
 
+          <!-- Share Buttons -->
           <div class="share-row">
             <span class="share-label">Share this story</span>
 
@@ -970,109 +971,70 @@
 
   <!-- JavaScript -->
   <script>
-
     // Reading progress bar
-    const progressBar = document.getElementById("progressBar");
-    if (progressBar) {
-      window.addEventListener("scroll", () => {
-        const page = document.documentElement;
-        const scrollableHeight = page.scrollHeight - page.clientHeight;
-        const scrolled =
-          scrollableHeight > 0
-            ? (page.scrollTop / scrollableHeight) * 100
-            : 0;
-
-        progressBar.style.width = `${scrolled}%`;
-      });
-    }
+    const progress = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      progress.style.width = scrolled + '%';
+    });
 
     // Timeline click-to-expand
-    document
-      .querySelectorAll(".timeline-vertical .t-toggle")
-      .forEach((button) => {
-        button.addEventListener("click", () => {
-          const item = button.closest(".t-item");
-          const isOpen = item.classList.toggle("is-open");
-
-          button.setAttribute("aria-expanded", String(isOpen));
-        });
+    document.querySelectorAll('.timeline-vertical .t-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.t-item');
+        const isOpen = item.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
+    });
 
     // Share buttons
     const storyTitle = document.title;
-    const storyUrl = window.location.href.split("#")[0];
+    const storyUrl = window.location.href;
 
-    function fallbackCopy(text) {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      textArea.setAttribute("readonly", "");
-      textArea.style.position = "fixed";
-      textArea.style.left = "-9999px";
+    document.querySelectorAll(".share-btn[data-share]").forEach(btn => {
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
 
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-    }
-
-    function showCopiedState(button) {
-      button.setAttribute("aria-label", "Link copied");
-      button.classList.add("copied");
-
-      setTimeout(() => {
-        button.setAttribute("aria-label", "Copy link");
-        button.classList.remove("copied");
-      }, 1500);
-    }
-
-    document.querySelectorAll(".share-btn[data-share]").forEach((button) => {
-      button.addEventListener("click", async (event) => {
-        event.preventDefault();
-
+        const type = btn.dataset.share;
         const encodedTitle = encodeURIComponent(storyTitle);
         const encodedUrl = encodeURIComponent(storyUrl);
-        const shareType = button.dataset.share;
 
-        const shareUrls = {
-          twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
-          facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-          linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-          email: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
-        };
+        let shareUrl = "";
 
-        if (shareType === "copy") {
+        if (type === "twitter") {
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+        }
+
+        if (type === "facebook") {
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+        }
+
+        if (type === "linkedin") {
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        }
+
+        if (type === "email") {
+          shareUrl = `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
+        }
+
+        if (type === "copy") {
           try {
-            if (navigator.clipboard && window.isSecureContext) {
-              await navigator.clipboard.writeText(storyUrl);
-            } else {
-              fallbackCopy(storyUrl);
-            }
+            await navigator.clipboard.writeText(storyUrl);
+            btn.setAttribute("aria-label", "Link copied");
+            btn.classList.add("copied");
 
-            showCopiedState(button);
-          } catch (error) {
+            setTimeout(() => {
+              btn.setAttribute("aria-label", "Copy link");
+              btn.classList.remove("copied");
+            }, 1500);
+          } catch {
             alert("Could not copy link.");
           }
-
           return;
         }
 
-        const shareUrl = shareUrls[shareType];
-
-        if (!shareUrl) return;
-
-        if (shareType === "email") {
-          window.location.href = shareUrl;
-          return;
-        }
-
-        window.open(
-          shareUrl,
-          "_blank",
-          "noopener,noreferrer,width=700,height=500",
-        );
+        window.open(shareUrl, "_blank", "noopener,noreferrer,width=700,height=500");
       });
     });
   </script>
-</body>
-
-</html>
