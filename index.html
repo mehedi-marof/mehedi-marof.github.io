@@ -15,35 +15,58 @@
   <meta name="description"
     content="Mehedi Marof is an investigative journalist working at the intersection of politics, society, and data. Currently based in Washington, D.C. Originally from Bangladesh." />
   <meta name="author" content="Mehedi Marof" />
+  <meta name="application-name" content="Mehedi Marof" />
   <link rel="canonical" href="https://mehedimarof.com/" />
 
   <!-- Open Graph + Twitter -->
   <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Mehedi Marof" />
+  <meta property="og:url" content="https://mehedimarof.com/" />
   <meta property="og:title" content="Mehedi Marof — Investigative Journalist" />
   <meta property="og:description" content="Investigations, data, and long-form reporting." />
   <meta property="og:image" content="https://mehedimarof.com/images/mehedi-marof.jpg" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mehedimarof" />
+  <meta name="twitter:title" content="Mehedi Marof — Investigative Journalist" />
+  <meta name="twitter:description" content="Investigations, data, and long-form reporting." />
   <meta name="twitter:image" content="https://mehedimarof.com/images/mehedi-marof.jpg" />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mehedi Marof",
-    "url": "https://mehedimarof.com/",
-    "image": "https://mehedimarof.com/images/mehedi-marof.jpg",
-    "jobTitle": "Investigative Journalist",
-    "worksFor": [{
-      "@type": "Organization",
-      "name": "Howard Center for Investigative Journalism",
-      "url": "https://merrill.umd.edu/howard-center-for-investigative-journalism"
-    }],
-    "sameAs": [
-      "https://x.com/mehedimarof",
-      "https://www.linkedin.com/in/mehedimarof/",
-      "https://muckrack.com/mehedi-hasan-marof"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://mehedimarof.com/#website",
+        "name": "Mehedi Marof",
+        "alternateName": [
+          "Mehedi Hasan Marof",
+          "Mehedi Marof Portfolio"
+        ],
+        "url": "https://mehedimarof.com/"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://mehedimarof.com/#person",
+        "name": "Mehedi Marof",
+        "url": "https://mehedimarof.com/",
+        "image": "https://mehedimarof.com/images/mehedi-marof.jpg",
+        "jobTitle": "Investigative Journalist",
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Howard Center for Investigative Journalism",
+            "url": "https://merrill.umd.edu/howard-center-for-investigative-journalism"
+          }
+        ],
+        "sameAs": [
+          "https://x.com/mehedimarof",
+          "https://www.linkedin.com/in/mehedimarof/",
+          "https://muckrack.com/mehedi-hasan-marof"
+        ]
+      }
     ]
   }
   </script>
@@ -205,6 +228,7 @@
         <div class="work-head">
           <h2 class="section-title">Selected <span class="serif">work</span></h2>
         </div>
+
         <!-- ============ Filter bar for future use ============ -->
         <div class="filter-bar" style="display:none">
           <span class="filter-label"><i data-lucide="filter"></i><span class="filter-label-text">Filter</span></span>
