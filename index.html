@@ -1,362 +1,382 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Marof — Investigative Reporter</title>
-    <meta name="description"
-        content="Mehedi Marof is a US-based Bangladeshi journalist working at the intersection of data, investigations, politics, and society.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <!-- Favicon: rounded sage-olive M -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%235a6b4a'/><path d='M6.8 23.5 L6.8 9.2 C6.8 8.6 7.2 8.2 7.8 8.2 L9.6 8.2 C10.2 8.2 10.6 8.5 10.8 9 L16 18.4 L21.2 9 C21.4 8.5 21.8 8.2 22.4 8.2 L24.2 8.2 C24.8 8.2 25.2 8.6 25.2 9.2 L25.2 23.5 C25.2 24 24.8 24.4 24.2 24.4 L22.6 24.4 C22 24.4 21.6 24 21.6 23.5 L21.6 14.6 L17.5 21.8 C17.3 22.2 16.9 22.4 16.4 22.4 L15.6 22.4 C15.1 22.4 14.7 22.2 14.5 21.8 L10.4 14.6 L10.4 23.5 C10.4 24 10 24.4 9.4 24.4 L7.8 24.4 C7.2 24.4 6.8 24 6.8 23.5 Z' fill='%23ffffff'/></svg>" />
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='48' fill='%235a6b4a'/><path d='M40 130 L40 50 L62 50 L90 100 L118 50 L140 50 L140 130 L123 130 L123 82 L97 126 L83 126 L57 82 L57 130 Z' fill='%23ffffff'/></svg>" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="site/css/style.css">
+  <title>Mehedi Marof — Investigative Journalist</title>
+  <meta name="description"
+    content="Mehedi Marof is an investigative journalist working at the intersection of politics, society, and data. Currently based in Washington, D.C. Originally from Bangladesh." />
+  <meta name="author" content="Mehedi Marof" />
+  <link rel="canonical" href="https://mehedimarof.com/" />
+
+  <!-- Open Graph + Twitter -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Mehedi Marof — Investigative Journalist" />
+  <meta property="og:description" content="Investigations, data, and long-form reporting." />
+  <meta property="og:image" content="https://mehedimarof.com/images/mehedi-marof.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@mehedimarof" />
+  <meta name="twitter:image" content="https://mehedimarof.com/images/mehedi-marof.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mehedi Marof",
+    "url": "https://mehedimarof.com/",
+    "image": "https://mehedimarof.com/images/mehedi-marof.jpg",
+    "jobTitle": "Investigative Journalist",
+    "worksFor": [{
+      "@type": "Organization",
+      "name": "Howard Center for Investigative Journalism",
+      "url": "https://merrill.umd.edu/howard-center-for-investigative-journalism"
+    }],
+    "sameAs": [
+      "https://x.com/mehedimarof",
+      "https://www.linkedin.com/in/mehedimarof/",
+      "https://muckrack.com/mehedi-hasan-marof"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.microlink.io" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-    <header class="site-header" id="top">
-        <div class="container">
-            <nav class="navbar navbar-expand-md p-0" aria-label="Main navigation">
-                <a class="navbar-brand site-logo m-0" href="index.html">Mehedi Marof</a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+  <!-- ============ NAV ============ -->
+  <nav class="nav-mm" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">Mehedi Marof</a>
+      <ul class="nav-links">
+        <li><a href="#work" data-target="work">Work</a></li>
+        <li><a href="#experience" data-target="experience">Experience</a></li>
+        <li><a href="#contact" data-target="contact">Contact</a></li>
+      </ul>
+      <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+        <span class="icon-moon"><i data-lucide="moon"></i></span>
+        <span class="icon-sun"><i data-lucide="sun"></i></span>
+      </button>
+    </div>
+  </nav>
 
-                <div class="collapse navbar-collapse justify-content-md-end" id="mainNav">
-                    <ul class="navbar-nav ms-auto gap-md-4">
-                        <li class="nav-item"><a class="nav-link" href="resume/">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="clips/">Reportages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact/">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container-mm">
+        <div class="hero-inner">
+          <div class="headshot" title="Mehedi Marof">
+            <img src="images/mehedi-marof.jpg" alt="Portrait of Mehedi Marof"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:grid;place-items:center;font-family:Quicksand,sans-serif;font-size:34px;font-weight:600;color:var(--ink-faint)&quot;>M</div>';" />
+          </div>
+
+          <h1 class="hero-name" id="hero-name" aria-label="Mehedi Marof">
+            <span class="word"><span data-word="Mehedi">Mehedi</span></span>
+            <span class="word accent-name"><span data-word="Marof">Marof</span></span>
+          </h1>
+
+          <div class="hero-tagline">
+            <span class="live-dot"></span>
+            Investigative journalist · Washington, D.C.
+          </div>
+
+          <p class="hero-bio">
+            Mehedi Marof is a journalist working at the intersection of <em>politics</em>,
+            <em>society</em>, and <em>data</em>. He reports with the
+            <a class="u" href="https://merrill.umd.edu/howard-center-for-investigative-journalism" target="_blank"
+              rel="noopener">Howard Center for Investigative Journalism</a>
+            at the University of Maryland.
+            <button class="bio-more-toggle" id="bio-toggle" aria-expanded="false" aria-controls="bio-extended">
+              <span id="bio-toggle-lbl">More</span><i data-lucide="chevron-down"></i>
+            </button>
+          </p>
+
+          <div class="bio-extended" id="bio-extended">
+            <p>
+              His freelance work has appeared in <strong>Al Jazeera</strong>, <strong>NBC News</strong>,
+              <strong>Rest of World</strong>, <strong>The Diplomat</strong>, <strong>Dialogue Earth</strong>,
+              <strong>Scroll</strong>, <strong>Maryland Matters</strong>, and <strong>The Wire</strong>.
+              Before D.C., he was a staff correspondent at the non-profit investigative newsroom
+              <strong>Netra News</strong> in Dhaka.
+            </p>
+            <p>
+              He is pursuing a master's at the
+              <a class="u" href="https://merrill.umd.edu/" target="_blank" rel="noopener">Philip Merrill College of
+                Journalism</a>
+              and graduated summa cum laude in 2023 from the
+              <a class="u" href="https://ulab.edu.bd/" target="_blank" rel="noopener">University of Liberal Arts
+                Bangladesh</a>.
+            </p>
+          </div>
+
+          <div class="hero-icons">
+            <a class="icon-link" href="mailto:mehedimarof@gmail.com" title="Email" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a class="icon-link" href="https://x.com/mehedimarof" target="_blank" rel="noopener" title="X"
+              aria-label="X">
+              <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/mehedimarof/" target="_blank" rel="noopener"
+              title="LinkedIn" aria-label="LinkedIn">
+              <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a class="icon-link" href="https://muckrack.com/mehedi-hasan-marof" target="_blank" rel="noopener"
+              title="Muck Rack portfolio" aria-label="Muck Rack">
+              <i data-lucide="file-text"></i>
+            </a>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero-main">
-            <div class="container">
-                <div class="hero-centered">
-                    <img src="site/images/headshot.jpg" alt="Headshot of Mehedi Marof" class="headshot-round">
-
-                    <h1 class="hero-title">Mehedi Marof</h1>
-
-                    <p class="hero-intro">
-                        US-based Bangladeshi journalist working at the intersection of data, investigations, politics,
-                        and society.
-                    </p>
-
-                    <p class="hero-links hero-links-top">
-                        <a class="more-link" data-bs-toggle="collapse" href="#extendedBio" role="button"
-                            aria-expanded="false" aria-controls="extendedBio">
-                            More ↓
-                        </a>
-                    </p>
-
-                    <div class="collapse" id="extendedBio">
-                        <div class="hero-long-bio">
-                            <p class="hero-bio">
-                                Mehedi Marof is an investigative journalist from Dhaka, Bangladesh currently based in
-                                Washington, D.C., and reporting with the
-                                <a class="bio-link"
-                                    href="https://merrill.umd.edu/howard-center-for-investigative-journalism"
-                                    target="_blank" rel="noopener noreferrer">Howard Center for Investigative
-                                    Journalism</a>.
-                            </p>
-
-                            <p class="hero-bio">
-                                His freelance reporting has appeared in publications including
-                                <span class="bio-emph">Al Jazeera</span>,
-                                <span class="bio-emph">NBC News</span>,
-                                <span class="bio-emph">Rest of World</span>,
-                                <span class="bio-emph">The Diplomat</span>,
-                                <span class="bio-emph">Dialogue Earth</span>,
-                                <span class="bio-emph">Scroll</span>,
-                                <span class="bio-emph">Maryland Matters</span>,
-                                and <span class="bio-emph">The Wire</span>. He previously was a reporter with the
-                                nonprofit investigative newsroom
-                                <span class="bio-emph">Netra News</span> in Dhaka.
-                            </p>
-
-                            <p class="hero-bio">
-                                Marof is now pursuing a master of journalism (M.J.) at the
-                                <a class="bio-link" href="https://merrill.umd.edu/" target="_blank"
-                                    rel="noopener noreferrer">University of Maryland</a>. He
-                                graduated summa cum laude in journalism from the
-                                <a class="bio-link" href="https://ulab.edu.bd/" target="_blank"
-                                    rel="noopener noreferrer">University of Liberal Arts Bangladesh</a> in 2023, and
-                                received the Vice Chancellor's Award and the Dean's Award. He also was a research
-                                assistant at the
-                                <a class="bio-link" href="https://csd.ulab.edu.bd/" target="_blank"
-                                    rel="noopener noreferrer">Center for Sustainable Development</a>.
-                            </p>
-
-                            <p class="hero-links hero-links-top">
-                                <a class="more-link" data-bs-toggle="collapse" href="#extendedBio" role="button"
-                                    aria-expanded="true" aria-controls="extendedBio">
-                                    Less ↑
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="hero-links">
-                        <a href="mailto:mehedimarof@gmail.com">Email</a>
-                        <span class="hero-divider">•</span>
-                        <a href="https://x.com/mehedimarof" target="_blank" rel="noopener noreferrer">X</a>
-                        <span class="hero-divider">•</span>
-                        <a href="https://www.linkedin.com/in/mehedimarof/" target="_blank"
-                            rel="noopener noreferrer">LinkedIn</a>
-                    </div>
-
-                    <div class="hero-animated">
-                        <div class="scrolling-hero" aria-label="Focus areas">
-                            <span id="rotating-word" class="rotating-word">Investigation</span>
-                            <span class="ampersand">&amp;</span>
-                            <span class="hero-topic">Journalism</span>
-                        </div>
-
-                        <div class="pills" aria-label="Tools">
-                            <span class="pill">R</span>
-                            <span class="pill">D3.js</span>
-                            <span class="pill">HTML/CSS</span>
-                            <span class="pill">OpenRefine</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="selected-work-section">
-            <div class="container">
-                <div class="section-intro">
-                    <h2 class="section-heading">Selected Work</h2>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4">
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <a href="https://www.aljazeera.com/features/2026/1/29/bangladesh-election-is-the-military-still-a-power-behind-the-scenes"
-                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
-                                <img src="site/images/previews/military-aje.webp"
-                                    alt="Preview image for Bangladesh election story" class="card-img-top story-image">
-                                <div class="card-body">
-                                    <div class="story-outlet-logo mb-2">
-                                        <img src="site/images/logos/aljazeera.svg" alt="Al Jazeera logo">
-                                    </div>
-                                    <h3 class="story-headline mb-0">
-                                        Bangladesh election: Is the military still a power behind the scenes?
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <a href="https://restofworld.org/2025/musk-starlink-trump-doge/" target="_blank"
-                                rel="noopener noreferrer" class="text-decoration-none text-reset">
-                                <img src="site/images/previews/row-starlink.jpg" alt="Preview image for Starlink story"
-                                    class="card-img-top story-image">
-                                <div class="card-body">
-                                    <div class="story-outlet-logo mb-2">
-                                        <img src="site/images/logos/restofworld.svg" alt="Rest of World logo">
-                                    </div>
-                                    <h3 class="story-headline mb-0">
-                                        When Musk joined Trump, countries rolled out the red carpet for Starlink
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <a href="https://dialogue.earth/en/climate/climate-disasters-linked-to-child-marriage-bangladesh/"
-                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
-                                <img src="site/images/previews/dialogue-child-marriage.jpg"
-                                    alt="Preview image for climate and child marriage story"
-                                    class="card-img-top story-image">
-                                <div class="card-body">
-                                    <div class="story-outlet-logo mb-2">
-                                        <img src="site/images/logos/dialogueearth.svg" alt="Dialogue Earth logo">
-                                    </div>
-                                    <h3 class="story-headline mb-0">
-                                        'One less mouth to feed': Climate disasters fuelling child marriage in
-                                        Bangladesh
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <a href="https://www.nbcnews.com/news/world/bangladesh-prime-minister-reportedly-ousted-student-led-protests-rcna165110"
-                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
-                                <img src="site/images/previews/nbc-ousted.jpg"
-                                    alt="Preview image for NBC News story on Bangladesh protests"
-                                    class="card-img-top story-image">
-                                <div class="card-body">
-                                    <div class="story-outlet-logo mb-2">
-                                        <img src="site/images/logos/nbcnews.svg" alt="NBC News logo">
-                                    </div>
-                                    <h3 class="story-headline mb-0">
-                                        Bangladesh prime minister is ousted after weeks of deadly protests
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card story-card h-100">
-                            <a href="https://www.aljazeera.com/news/2024/10/27/once-powerful-student-members-of-hasinas-party-bangladeshs-new-outcastes"
-                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
-                                <img src="site/images/previews/alj-outcasts.jpg"
-                                    alt="Preview image for Bangladesh's new outcasts story"
-                                    class="card-img-top story-image">
-                                <div class="card-body">
-                                    <div class="story-outlet-logo mb-2">
-                                        <img src="site/images/logos/aljazeera.svg" alt="Al Jazeera logo">
-                                    </div>
-                                    <h3 class="story-headline mb-0">
-                                        Bangladesh's new outcasts: Students from ex-PM Hasina's party now in hiding
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="publication-section">
-            <div class="container">
-                <div class="publication-grid">
-                    <div class="publication-column publication-column-left">
-                        <h2 class="panel-heading">Works Appeared In</h2>
-
-                        <div class="row g-3">
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/aljazeera.svg" alt="Al Jazeera logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/nbcnews.svg" alt="NBC News logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/thediplomat.svg"
-                                        alt="The Diplomat logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/dialogueearth.svg"
-                                        alt="Dialogue Earth logo"></div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/restofworld.svg"
-                                        alt="Rest of World logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/netranews.svg" alt="Netra News logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/tbsnews.svg"
-                                        alt="The Business Standard logo"></div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/thedailystar.svg"
-                                        alt="The Daily Star logo"></div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/scrollindia.svg" alt="Scroll logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/thewire.svg" alt="The Wire logo">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/marylandmatters.png"
-                                        alt="Maryland Matters logo"></div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="logo-box"><img src="site/images/logos/college-park-hn.webp"
-                                        alt="College Park Here and Now logo"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-divider" aria-hidden="true"></div>
-
-                    <div class="publication-column publication-column-right">
-                        <h2 class="panel-heading">Interviewed By</h2>
-
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="logo-box"><img src="site/images/logos/independentuk.svg"
-                                        alt="The Independent logo"></div>
-                            </div>
-                            <div class="col-12">
-                                <div class="logo-box"><img src="site/images/logos/bbcworldservice.svg"
-                                        alt="BBC World Service logo"></div>
-                            </div>
-                            <div class="col-12">
-                                <div class="logo-box"><img src="site/images/logos/abcaustralia.svg"
-                                        alt="ABC Australia logo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div
-                class="footer-inner d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-                <p class="mb-0">&copy; 2026 Mehedi Marof</p>
-                <a href="#top" class="back-to-top">Back to top ↑</a>
-            </div>
+    <!-- ============ SKILLS BAND ============ -->
+    <div class="skills-band">
+      <div class="skills-inner">
+        <span class="combo">
+          <span class="rotator" id="rotator">
+            <span class="rotator-word in" id="rotator-word">investigation</span>
+          </span>
+          <span class="ampersand">&amp;</span>
+          <span class="static-word">journalism</span>
+        </span>
+        <span class="skill-divider d-none d-md-inline-block"></span>
+        <div class="skills-pills">
+          <span class="pill">R</span>
+          <span class="pill">D3.js</span>
+          <span class="pill">HTML/CSS</span>
+          <span class="pill">OpenRefine</span>
+          <span class="pill">Flourish</span>
+          <span class="pill">Scrollama</span>
+          <span class="pill">Premiere Pro</span>
+          <span class="pill">Illustrator</span>
+          <span class="pill">Photoshop</span>
         </div>
+      </div>
+    </div>
+
+    <!-- ============ LOGOS BAND ============ -->
+    <section class="logos-band">
+      <div class="container-mm">
+        <div class="logos-grid">
+          <div class="logos-col">
+            <h4>Work appeared <span class="accent">in</span></h4>
+            <div class="logo-row" id="logos-appeared"></div>
+          </div>
+          <div class="logos-col">
+            <h4>Interviewed <span class="accent">by</span></h4>
+            <div class="logo-row compact" id="logos-interviewed"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section id="work">
+      <div class="container-mm">
+        <div class="work-head">
+          <h2 class="section-title">Selected <span class="serif">work</span></h2>
+        </div>
+        <!-- ============ Filter bar for future use ============ -->
+        <div class="filter-bar" style="display:none">
+          <span class="filter-label"><i data-lucide="filter"></i><span class="filter-label-text">Filter</span></span>
+          <div class="filter-icons" id="filter-icons">
+            <button class="filter-btn" data-filter="investigation" aria-pressed="false" aria-label="Investigation">
+              <i data-lucide="search"></i><span class="label">Investigation</span>
+            </button>
+            <button class="filter-btn" data-filter="data" aria-pressed="false" aria-label="Data">
+              <i data-lucide="bar-chart-3"></i><span class="label">Data</span>
+            </button>
+            <button class="filter-btn" data-filter="feature" aria-pressed="false" aria-label="Feature">
+              <i data-lucide="pen-line"></i><span class="label">Feature</span>
+            </button>
+            <button class="filter-btn" data-filter="opinion" aria-pressed="false" aria-label="Opinion">
+              <i data-lucide="message-square-quote"></i><span class="label">Opinion</span>
+            </button>
+            <button class="filter-btn" data-filter="breaking" aria-pressed="false" aria-label="Breaking">
+              <i data-lucide="bell-ring"></i><span class="label">Breaking</span>
+            </button>
+            <button class="filter-btn" data-filter="politics" aria-pressed="false" aria-label="Politics">
+              <i data-lucide="landmark"></i><span class="label">Politics</span>
+            </button>
+            <button class="filter-btn" data-filter="climate" aria-pressed="false" aria-label="Climate">
+              <i data-lucide="leaf"></i><span class="label">Climate</span>
+            </button>
+            <button class="filter-btn" data-filter="local" aria-pressed="false" aria-label="Local">
+              <i data-lucide="map-pin"></i><span class="label">Local</span>
+            </button>
+            <button class="filter-btn" data-filter="rights" aria-pressed="false" aria-label="Rights">
+              <i data-lucide="scale"></i><span class="label">Rights</span>
+            </button>
+          </div>
+          <button class="clear-filters" id="clear-filters" hidden>Clear</button>
+        </div>
+
+        <div class="work-grid" id="work-grid"></div>
+        <div class="empty-state" id="empty-state">No stories match those filters.</div>
+
+        <div class="view-more-wrap">
+          <button class="view-more" id="view-more" aria-expanded="false">
+            <span class="lbl-show">View more stories</span>
+            <span class="lbl-hide" hidden>Show less</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECT ============ -->
+    <section id="project" class="featured-project">
+      <div class="container-mm">
+        <div class="fp-grid">
+          <div class="fp-text">
+            <div class="fp-tag"><i data-lucide="zap"></i>Class project · 2025</div>
+            <p>
+              An interactive scrollytelling piece.
+            </p>
+            <p>
+              Built end-to-end: data wrangled in R from CDC WONDER, choropleths and motion in D3.js,
+              written and designed as a long-scroll narrative.
+            </p>
+            <div class="fp-stack">
+              <span class="pill">R + tidyverse</span>
+              <span class="pill">D3.js</span>
+              <span class="pill">TopoJSON</span>
+              <span class="pill">Scrollytelling</span>
+              <span class="pill">Choropleth</span>
+            </div>
+            <a class="fp-cta" href="https://mehedi-marof.github.io/opioid-overdose-crisis/" target="_blank"
+              rel="noopener">
+              Open the project
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+          <div class="fp-preview">
+            <div class="fp-preview-bar">
+              <span class="fp-preview-dot"></span>
+              <span class="fp-preview-dot"></span>
+              <span class="fp-preview-dot"></span>
+              <span class="fp-preview-url">mehedi-marof.github.io/opioid-overdose-crisis</span>
+            </div>
+            <div class="fp-preview-frame" id="fp-frame">
+              <iframe id="fp-iframe" src="about:blank" title="Live preview" loading="lazy"
+                sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+            <div class="fp-preview-overlay" id="fp-overlay">
+              <span class="fp-preview-hint"><i data-lucide="mouse-pointer-2"></i>Hover to interact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE + EDUCATION ============ -->
+    <section id="experience">
+      <div class="container-mm">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-list" id="exp-list"></div>
+
+        <h2 class="section-title subsection-gap">Education</h2>
+        <div class="exp-list" id="edu-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ HONORS + AFFILIATIONS ============ -->
+    <section id="honors">
+      <div class="container-mm">
+        <h2 class="section-title">Awards &amp; <span class="serif">fellowships</span></h2>
+        <div class="honors-list" id="honors-list"></div>
+
+        <h2 class="section-title subsection-gap">Affiliations</h2>
+        <div class="affil-list-block" id="affil-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact-section">
+      <div class="container-mm">
+        <div class="contact-inner">
+          <h2 class="contact-line">Have a <span class="accent">story?</span></h2>
+          <p class="contact-sub">Tips, pitches, freelance assignments — email is fastest, Signal for sensitive material.
+          </p>
+          <a class="contact-cta" href="mailto:mehedimarof@gmail.com">
+            <i data-lucide="mail"></i>
+            Send a message
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <div class="contact-channels">
+            <a class="contact-icon" href="mailto:mehedimarof@gmail.com" data-label="Email" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a class="contact-icon" href="https://x.com/mehedimarof" target="_blank" rel="noopener"
+              data-label="X · @mehedimarof" aria-label="X">
+              <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a class="contact-icon" href="https://www.linkedin.com/in/mehedimarof/" target="_blank" rel="noopener"
+              data-label="LinkedIn" aria-label="LinkedIn">
+              <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a class="contact-icon" href="https://muckrack.com/mehedi-hasan-marof" target="_blank" rel="noopener"
+              data-label="Muck Rack" aria-label="Muck Rack">
+              <i data-lucide="file-text"></i>
+            </a>
+            <a class="contact-icon" href="#" data-label="Signal · marof.10"
+              onclick="navigator.clipboard.writeText('marof.10');this.setAttribute('data-label','Copied ✓');setTimeout(()=>this.setAttribute('data-label','Signal · marof.10'),1500);return false;"
+              aria-label="Signal">
+              <i data-lucide="shield"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container-mm">
+        <div class="footer-inner">
+          <div>© 2026 Mehedi Marof</div>
+          <a href="#top">Back to top <i data-lucide="arrow-up"></i></a>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+  </main>
 
-    <script>
-        const words = ["Investigation", "Analysis", "Long-form", "Data+viz", "Code", "OSINT", "AI"];
-        const rotatingWord = document.getElementById("rotating-word");
-        let index = 0;
-
-        setInterval(() => {
-            rotatingWord.classList.add("fade-out");
-
-            setTimeout(() => {
-                index = (index + 1) % words.length;
-                rotatingWord.textContent = words[index];
-                rotatingWord.classList.remove("fade-out");
-            }, 180);
-        }, 2200);
-    </script>
+  <!-- Site logic -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>
